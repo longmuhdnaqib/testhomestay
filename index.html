@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Falisy Homestay — Tenang, Selesa & Berbaloi | Balok, Kuantan</title>
+  <meta name="description" content="Falisy Homestay — Penginapan premium di Balok, Kuantan. 3 bilik tidur, 2 bilik air, AC, dapur lengkap, WiFi laju & parking. Tempah sekarang melalui WhatsApp.">
+  <meta name="keywords" content="Falisy Homestay, homestay kuantan, homestay balok, penginapan kuantan, homestay pantai kuantan">
+  <meta name="author" content="Falisy Homestay">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Falisy Homestay — Tenang, Selesa & Berbaloi">
+  <meta property="og:description" content="Penginapan premium di Balok, Kuantan. Sesuai untuk keluarga & berkumpulan. Tempah melalui WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="hero.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind CSS & Font -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    /* ROOT & BODY */
+    :root{--bg:#0f172a;--card:#0b1220;--gold:#D4A017;--muted:#94a3b8}
+    *{font-family:'Poppins',sans-serif}
+    body{background:linear-gradient(180deg,#051024 0%,#071230 50%);color:#e6eef8}
+    
+    /* GLASS & BUTTON */
+    .glass{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));backdrop-filter:blur(6px)}
+    .gold{color:var(--gold)}
+    .btn-cta{background:linear-gradient(90deg,#0ea5a2,#06b6d4);color:#04202a}
+    a.whatsapp{background:#25D366;color:#04202a}
+    .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .gallery-img{transition:transform .35s, box-shadow .35s}
+    .gallery-img:hover{transform:scale(1.06);box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+    @media (max-width:640px){.hero-title{font-size:1.4rem}}
+  </style>
+
+  <!-- Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LodgingBusiness",
+    "name":"Falisy Homestay",
+    "description":"Falisy Homestay — Tenang, Selesa & Berbaloi. Penginapan di Balok, Kuantan, Pahang.",
+    "url":"https://example.com",
+    "telephone":"+60196579341",
+    "address": {
+      "@type":"PostalAddress",
+      "addressLocality":"Balok, Kuantan",
+      "addressRegion":"Pahang",
+      "postalCode":"",
+      "addressCountry":"MY"
+    },
+    "geo":{"@type":"GeoCoordinates","latitude":3.824,"longitude":103.433},
+    "image":"hero.jpg",
+    "checkinTime":"15:00","checkoutTime":"12:00",
+    "amenityFeature":[
+      {"@type":"LocationFeatureSpecification","name":"3 Bilik Tidur"},
+      {"@type":"LocationFeatureSpecification","name":"2 Bilik Air"},
+      {"@type":"LocationFeatureSpecification","name":"Aircond"},
+      {"@type":"LocationFeatureSpecification","name":"Dapur Lengkap"},
+      {"@type":"LocationFeatureSpecification","name":"Mesin Basuh"},
+      {"@type":"LocationFeatureSpecification","name":"Parking"},
+      {"@type":"LocationFeatureSpecification","name":"BBQ Set"},
+      {"@type":"LocationFeatureSpecification","name":"WiFi"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="fixed w-full z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-15 h-15 rounded-md bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center shadow-soft overflow-hidden">
+        <img src="hero.jpg" alt="Falisy Homestay Logo" class="w-12 h-12 object-contain">
+        </div>
+
+        <div>
+          <h1 class="text-white font-bold">Falisy Homestay</h1>
+          <p class="text-xs text-muted">Tenang, Selesa & Berbaloi</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6 text-sm">
+        <a href="#home" class="hover:underline">Utama</a>
+        <a href="#features" class="hover:underline">Kemudahan</a>
+        <a href="#gallery" class="hover:underline">Galeri</a>
+        <a href="#calendar" class="hover:underline">Calendar</a>
+        <a href="#pricing" class="hover:underline">Harga</a>
+        <a href="#location" class="hover:underline">Lokasi</a>
+        <a href="#contact" class="hover:underline">Hubungi</a>
+        <a href="https://wa.me/60196579341" target="_blank" class="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-full whatsapp font-semibold">
+          <i class="fab fa-whatsapp"></i> Tempah
+        </a>
+      </nav>
+      <button id="mobileBtn" class="md:hidden p-2 bg-white/5 rounded-md">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="pt-28 pb-12">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
+      <div data-aos="fade-right">
+        <p class="text-sm gold font-semibold">Penginapan Premium • Balok, Kuantan</p>
+        <h2 class="hero-title text-4xl sm:text-5xl font-extrabold mt-4 mb-4">Falisy Homestay — <span class="gold">Tenang, Selesa & Berbaloi</span></h2>
+        <p class="text-slate-200 mb-6">Ruang keluarga luas, bilik berhawa dingin, dapur lengkap dan WiFi laju. Sesuai untuk keluarga & kumpulan yang mahu penginapan selesa dekat pantai.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://wa.me/60196579341?text=Salam%20saya%20nak%20tempah%20Falisy%20Homestay" target="_blank" class="inline-flex items-center gap-3 px-5 py-3 rounded-full font-semibold btn-cta shadow-soft">
+            <i class="fab fa-whatsapp"></i> Tempah melalui WhatsApp
+          </a>
+          <a href="#gallery" class="inline-flex items-center gap-2 px-4 py-3 rounded-full glass">Lihat Galeri <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="mt-8 grid grid-cols-2 gap-3">
+          <div class="bg-gradient-to-tr from-slate-900 to-slate-800 rounded-lg p-4 glass">
+            <p class="text-xs text-muted">Kapasiti</p>
+            <p class="font-bold text-lg">6-8 Orang</p>
+          </div>
+          <div class="bg-gradient-to-tr from-slate-900 to-slate-800 rounded-lg p-4 glass">
+            <p class="text-xs text-muted">Harga Mula</p>
+            <p class="font-bold text-lg">RM180 / malam</p>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left" class="relative">
+        <img src="hero.jpg" alt="Falisy Homestay" class="rounded-xl w-full shadow-soft object-cover h-96 gallery-img cursor-pointer" onclick="openLightbox('images/hero.jpg')">
+        <div class="absolute -bottom-4 left-6 bg-gradient-to-br from-white/90 to-white/80 rounded-lg p-3 shadow-lg text-slate-900">
+          <div class="flex items-center gap-3">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <p class="text-xs">Lokasi</p>
+              <p class="font-semibold text-sm">Balok, Kuantan, Pahang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6">Kemudahan Utama</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- KEMUDAHAN CARDS -->
+        <div class="bg-card glass rounded-xl p-5">
+          <i class="fas fa-bed text-2xl gold"></i>
+          <h4 class="font-semibold mt-3">3 Bilik Tidur</h4>
+          <p class="text-sm text-muted mt-1">Bilik selesa dengan tilam premium.</p>
+        </div>
+        <div class="bg-card glass rounded-xl p-5">
+          <i class="fas fa-shower text-2xl gold"></i>
+          <h4 class="font-semibold mt-3">2 Bilik Air</h4>
+          <p class="text-sm text-muted mt-1">Air panas & kelengkapan penuh.</p>
+        </div>
+        <div class="bg-card glass rounded-xl p-5">
+          <i class="fas fa-snowflake text-2xl gold"></i>
+          <h4 class="font-semibold mt-3">Aircond</h4>
+          <p class="text-sm text-muted mt-1">AC di semua bilik untuk keselesaan.</p>
+        </div>
+        <div class="bg-card glass rounded-xl p-5">
+          <i class="fas fa-utensils text-2xl gold"></i>
+          <h4 class="font-semibold mt-3">Dapur Lengkap</h4>
+          <p class="text-sm text-muted mt-1">Periuk, peti sejuk, pinggan, kuali & sudu garfu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- GALERI SECTION -->
+<section id="gallery" class="py-12 bg-slate-900/30">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-6">Galeri</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;z-index:60;flex-direction:column">
+  <img id="lightboxImg" src="" style="max-width:90%;max-height:90%;border-radius:8px">
+  <button onclick="closeLightbox()" style="position:absolute;top:20px;right:24px;font-size:28px;color:white;background:none;border:none;cursor:pointer">&times;</button>
+</div>
+
+<script>
+function openLightbox(src){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Klik di luar gambar untuk tutup
+document.getElementById('lightbox').addEventListener('click', function(e){
+  if(e.target.id === 'lightbox'){
+    closeLightbox();
+  }
+});
+</script>
+   
+    <!-- CALENDAR SECTION -->
+<section id="calendar" class="py-12 bg-slate-800/20">
+  <div class="max-w-4xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-6 text-center">Kalendar Tempahan</h3>
+    
+    <!-- Pilih Tahun dan Bulan -->
+    <div class="flex justify-center gap-4 mb-6">
+      <select id="yearSelect" class="p-2 rounded-lg bg-slate-700 text-white"></select>
+      <select id="monthSelect" class="p-2 rounded-lg bg-slate-700 text-white">
+        <option value="0">Januari</option>
+        <option value="1">Februari</option>
+        <option value="2">Mac</option>
+        <option value="3">April</option>
+        <option value="4">Mei</option>
+        <option value="5">Jun</option>
+        <option value="6">Julai</option>
+        <option value="7">Ogos</option>
+        <option value="8">September</option>
+        <option value="9">Oktober</option>
+        <option value="10">November</option>
+        <option value="11">Disember</option>
+      </select>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div id="calendarGrid" class="grid grid-cols-7 gap-2 text-center text-white">
+      <div class="font-semibold">Ahad</div>
+      <div class="font-semibold">Isnin</div>
+      <div class="font-semibold">Selasa</div>
+      <div class="font-semibold">Rabu</div>
+      <div class="font-semibold">Khamis</div>
+      <div class="font-semibold">Jumaat</div>
+      <div class="font-semibold">Sabtu</div>
+    </div>
+
+    <!-- Pilih Mode -->
+    <div class="text-center mt-4">
+      <button id="ownerModeBtn" class="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-white font-semibold">Owner Mode</button>
+      <button id="customerModeBtn" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold">Customer Mode</button>
+    </div>
+  </div>
+</section>
+
+<script>
+// Ambil data booked dari localStorage
+let bookedDates = JSON.parse(localStorage.getItem('bookedDates')) || [];
+const today = new Date();
+const yearSelect = document.getElementById("yearSelect");
+const monthSelect = document.getElementById("monthSelect");
+const calendarGrid = document.getElementById("calendarGrid");
+let ownerMode = false; // default customer
+
+// Isi pilihan tahun (3 tahun sebelum dan 3 tahun akan datang)
+for(let y=today.getFullYear()-3; y<=today.getFullYear()+3; y++){
+  const opt = document.createElement("option");
+  opt.value = y;
+  opt.textContent = y;
+  if(y === today.getFullYear()) opt.selected = true;
+  yearSelect.appendChild(opt);
+}
+
+// Fungsi render calendar
+function renderCalendar(year, month){
+  calendarGrid.querySelectorAll(".date").forEach(d=>d.remove());
+
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month+1,0).getDate();
+
+  for(let i=0;i<firstDay;i++){
+    const empty = document.createElement("div");
+    empty.classList.add("date");
+    calendarGrid.appendChild(empty);
+  }
+
+  for(let day=1; day<=daysInMonth; day++){
+    const dateObj = new Date(year, month, day);
+    if(dateObj < new Date(today.getFullYear(), today.getMonth(), today.getDate())) continue; // hide tarikh lepas
+
+    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+    const cell = document.createElement("div");
+    cell.textContent = day;
+    cell.classList.add("date","p-2","rounded-lg","cursor-pointer");
+
+    if(bookedDates.includes(dateStr)){
+      cell.classList.add("bg-red-600","text-white");
+      cell.title = "Telah dibook";
+    } else {
+      cell.classList.add("bg-slate-600","hover:bg-slate-500","text-white");
+    }
+
+    // Klik toggle hanya kalau ownerMode
+    if(ownerMode){
+      cell.addEventListener("click",()=>{
+        if(bookedDates.includes(dateStr)){
+          bookedDates = bookedDates.filter(d => d !== dateStr);
+          cell.classList.remove("bg-red-600");
+          cell.classList.add("bg-slate-600");
+          cell.title = "";
+        } else {
+          bookedDates.push(dateStr);
+          cell.classList.remove("bg-slate-600");
+          cell.classList.add("bg-red-600");
+          cell.title = "Telah dibook";
+        }
+        localStorage.setItem('bookedDates', JSON.stringify(bookedDates));
+      });
+    } else {
+      cell.classList.remove("cursor-pointer");
+    }
+
+    calendarGrid.appendChild(cell);
+  }
+}
+
+// Load default
+renderCalendar(today.getFullYear(), today.getMonth());
+
+// Tukar bulan/tahun
+monthSelect.addEventListener("change",()=> renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value)));
+yearSelect.addEventListener("change",()=> renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value)));
+
+// Tukar mode dengan password
+document.getElementById("ownerModeBtn").addEventListener("click",()=>{
+  const password = prompt("Sila masukkan password:");
+  if(password === "falisybalok246"){ // tetapkan password owner di sini
+    ownerMode = true;
+    alert("Owner mode diaktifkan!");
+    renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value));
+  } else {
+    alert("Password salah! Customer mode diaktifkan.");
+    ownerMode = false;
+    renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value));
+  }
+});
+
+// Customer mode tetap
+document.getElementById("customerModeBtn").addEventListener("click",()=>{
+  ownerMode = false;
+  renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value));
+});
+</script>
+
+<style>
+.date {
+  transition: transform 0.2s;
+}
+.date:hover {
+  transform: scale(1.05);
+}
+</style>
+
+
+   
+  <!-- PRICING SECTION -->
+  <section id="pricing" class="py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6 text-center">Pakej & Harga</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 text-center">
+          <p class="text-sm text-muted">Standard</p>
+          <p class="text-3xl font-bold my-4">RM180</p>
+          <p class="text-sm">(1-4 orang) / malam</p>
+          <a href="https://wa.me/60196579341?text=Saya%20nak%20tempah%20pakej%20Standard" class="mt-6 inline-block whatsapp px-6 py-2 rounded-full font-semibold">Tempah</a>
+        </div>
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 text-center border-2 border-gold">
+          <p class="text-sm text-muted">Family</p>
+          <p class="text-3xl font-bold my-4">RM260</p>
+          <p class="text-sm">(5-8 orang) / malam</p>
+          <a href="https://wa.me/60196579341?text=Saya%20nak%20tempah%20pakej%20Family" class="mt-6 inline-block whatsapp px-6 py-2 rounded-full font-semibold">Tempah</a>
+        </div>
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 text-center">
+          <p class="text-sm text-muted">Weekend</p>
+          <p class="text-3xl font-bold my-4">RM320</p>
+          <p class="text-sm">(8 orang+) / malam</p>
+          <a href="https://wa.me/60196579341?text=Saya%20nak%20tempah%20pakej%20Weekend" class="mt-6 inline-block whatsapp px-6 py-2 rounded-full font-semibold">Tempah</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION SECTION -->
+  <section id="location" class="py-12 bg-slate-900/20">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-6 items-center">
+      <div>
+        <h3 class="text-2xl font-bold mb-3">Lokasi</h3>
+        <p class="text-muted mb-4">Falisy Homestay terletak di Balok, Kuantan — mudah akses ke pantai Balok, restoran dan kedai runcit.</p>
+        <ul class="text-sm space-y-2">
+          <li>• 5 minit ke Pantai Balok</li>
+          <li>• 10 minit ke Kuantan City</li>
+          <li>• Berhampiran kedai makan & kedai serbaneka</li>
+        </ul>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-soft">
+        <div class="map-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4021.7746502904392!2d103.3664575!3d3.9557554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31c8a39442285b0d%3A0x7293a5dd471ec756!2sFalisy%20Homestay%20-%20Balok%20Perdana!5e1!3m2!1sen!2smy!4v1764852061491!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 text-center glass shadow-soft">
+        <h3 class="text-2xl font-bold mb-3">Sedia Untuk Tempah?</h3>
+        <p class="text-muted mb-4">Klik WhatsApp untuk berhubung terus dan dapatkan jawapan pantas.</p>
+        <a href="https://wa.me/60196579341?text=Salam%20saya%20nak%20tempah%20Falisy%20Homestay" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 rounded-full whatsapp font-semibold">
+          <i class="fab fa-whatsapp"></i> WhatsApp Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center text-sm text-muted">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>© <span id="year"></span> Falisy Homestay. Semua hak terpelihara.</p>
+      <p class="mt-2">★ Long Muhammad Naqib </p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;z-index:60"> 
+    <img id="lightboxImg" src="" style="max-width:90%;max-height:90%;border-radius:8px"> 
+    <button onclick="closeLightbox()" style="position:absolute;top:20px;right:24px;font-size:28px;color:white;background:none;border:none">&times;</button>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({duration:800,once:true});
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightbox function
+    function openLightbox(src){ 
+      document.getElementById('lightboxImg').src = src; 
+      document.getElementById('lightbox').style.display='flex'; 
+      document.body.style.overflow='hidden'; 
+    }
+    function closeLightbox(){ 
+      document.getElementById('lightbox').style.display='none'; 
+      document.body.style.overflow='auto'; 
+    }
+
+    // Mobile nav toggle
+    const mobileBtn = document.getElementById('mobileBtn');
+    mobileBtn.addEventListener('click', ()=>{ 
+      const nav = document.querySelector('header nav'); 
+      nav.classList.toggle('hidden'); 
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        e.preventDefault(); 
+        const t=document.querySelector(this.getAttribute('href')); 
+        if(t){ window.scrollTo({top:t.offsetTop-80,behavior:'smooth'}) }
+      });
+    });
+  </script>
+
+  <style>.bg-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));}</style>
+
+</body>
+</html>
