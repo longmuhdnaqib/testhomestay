@@ -25,12 +25,10 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
   <style>
-    /* ROOT & BODY */
     :root{--bg:#0f172a;--card:#0b1220;--gold:#D4A017;--muted:#94a3b8}
     *{font-family:'Poppins',sans-serif}
     body{background:linear-gradient(180deg,#051024 0%,#071230 50%);color:#e6eef8}
-    
-    /* GLASS & BUTTON */
+
     .glass{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));backdrop-filter:blur(6px)}
     .gold{color:var(--gold)}
     .btn-cta{background:linear-gradient(90deg,#0ea5a2,#06b6d4);color:#04202a}
@@ -39,6 +37,7 @@
     .gallery-img{transition:transform .35s, box-shadow .35s}
     .gallery-img:hover{transform:scale(1.06);box-shadow:0 12px 30px rgba(0,0,0,0.6)}
     @media (max-width:640px){.hero-title{font-size:1.4rem}}
+    .bg-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));}
   </style>
 
   <!-- Business Schema -->
@@ -80,9 +79,8 @@
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <div class="w-15 h-15 rounded-md bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center shadow-soft overflow-hidden">
-        <img src="hero.jpg" alt="Falisy Homestay Logo" class="w-12 h-12 object-contain">
+          <img src="hero.jpg" alt="Falisy Homestay Logo" class="w-12 h-12 object-contain">
         </div>
-
         <div>
           <h1 class="text-white font-bold">Falisy Homestay</h1>
           <p class="text-xs text-muted">Tenang, Selesa & Berbaloi</p>
@@ -92,7 +90,6 @@
         <a href="#home" class="hover:underline">Utama</a>
         <a href="#features" class="hover:underline">Kemudahan</a>
         <a href="#gallery" class="hover:underline">Galeri</a>
-        <a href="#calendar" class="hover:underline">Calendar</a>
         <a href="#pricing" class="hover:underline">Harga</a>
         <a href="#location" class="hover:underline">Lokasi</a>
         <a href="#contact" class="hover:underline">Hubungi</a>
@@ -150,7 +147,6 @@
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold mb-6">Kemudahan Utama</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- KEMUDAHAN CARDS -->
         <div class="bg-card glass rounded-xl p-5">
           <i class="fas fa-bed text-2xl gold"></i>
           <h4 class="font-semibold mt-3">3 Bilik Tidur</h4>
@@ -175,197 +171,19 @@
     </div>
   </section>
 
-<!-- GALERI SECTION -->
-<section id="gallery" class="py-12 bg-slate-900/30">
-  <div class="max-w-6xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-6">Galeri</h3>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
-      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
-      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
-      <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+  <!-- GALERI SECTION -->
+  <section id="gallery" class="py-12 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6">Galeri</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+        <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+        <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+        <img src="hero.jpg" alt="" class="w-full h-40 object-cover rounded-lg cursor-pointer gallery-img" onclick="openLightbox(this.src)">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;z-index:60;flex-direction:column">
-  <img id="lightboxImg" src="" style="max-width:90%;max-height:90%;border-radius:8px">
-  <button onclick="closeLightbox()" style="position:absolute;top:20px;right:24px;font-size:28px;color:white;background:none;border:none;cursor:pointer">&times;</button>
-</div>
-
-<script>
-function openLightbox(src){
-  document.getElementById('lightboxImg').src = src;
-  document.getElementById('lightbox').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox(){
-  document.getElementById('lightbox').style.display = 'none';
-  document.body.style.overflow = 'auto';
-}
-
-// Klik di luar gambar untuk tutup
-document.getElementById('lightbox').addEventListener('click', function(e){
-  if(e.target.id === 'lightbox'){
-    closeLightbox();
-  }
-});
-</script>
-   
-    <!-- CALENDAR SECTION -->
-<section id="calendar" class="py-12 bg-slate-800/20">
-  <div class="max-w-4xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-6 text-center">Kalendar Tempahan</h3>
-    
-    <!-- Pilih Tahun dan Bulan -->
-    <div class="flex justify-center gap-4 mb-6">
-      <select id="yearSelect" class="p-2 rounded-lg bg-slate-700 text-white"></select>
-      <select id="monthSelect" class="p-2 rounded-lg bg-slate-700 text-white">
-        <option value="0">Januari</option>
-        <option value="1">Februari</option>
-        <option value="2">Mac</option>
-        <option value="3">April</option>
-        <option value="4">Mei</option>
-        <option value="5">Jun</option>
-        <option value="6">Julai</option>
-        <option value="7">Ogos</option>
-        <option value="8">September</option>
-        <option value="9">Oktober</option>
-        <option value="10">November</option>
-        <option value="11">Disember</option>
-      </select>
-    </div>
-
-    <!-- Calendar Grid -->
-    <div id="calendarGrid" class="grid grid-cols-7 gap-2 text-center text-white">
-      <div class="font-semibold">Ahad</div>
-      <div class="font-semibold">Isnin</div>
-      <div class="font-semibold">Selasa</div>
-      <div class="font-semibold">Rabu</div>
-      <div class="font-semibold">Khamis</div>
-      <div class="font-semibold">Jumaat</div>
-      <div class="font-semibold">Sabtu</div>
-    </div>
-
-    <!-- Pilih Mode -->
-    <div class="text-center mt-4">
-      <button id="ownerModeBtn" class="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-white font-semibold">Owner Mode</button>
-      <button id="customerModeBtn" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold">Customer Mode</button>
-    </div>
-  </div>
-</section>
-
-<script>
-// Ambil data booked dari localStorage
-let bookedDates = JSON.parse(localStorage.getItem('bookedDates')) || [];
-const today = new Date();
-const yearSelect = document.getElementById("yearSelect");
-const monthSelect = document.getElementById("monthSelect");
-const calendarGrid = document.getElementById("calendarGrid");
-let ownerMode = false; // default customer
-
-// Isi pilihan tahun (3 tahun sebelum dan 3 tahun akan datang)
-for(let y=today.getFullYear()-3; y<=today.getFullYear()+3; y++){
-  const opt = document.createElement("option");
-  opt.value = y;
-  opt.textContent = y;
-  if(y === today.getFullYear()) opt.selected = true;
-  yearSelect.appendChild(opt);
-}
-
-// Fungsi render calendar
-function renderCalendar(year, month){
-  calendarGrid.querySelectorAll(".date").forEach(d=>d.remove());
-
-  const firstDay = new Date(year, month, 1).getDay();
-  const daysInMonth = new Date(year, month+1,0).getDate();
-
-  for(let i=0;i<firstDay;i++){
-    const empty = document.createElement("div");
-    empty.classList.add("date");
-    calendarGrid.appendChild(empty);
-  }
-
-  for(let day=1; day<=daysInMonth; day++){
-    const dateObj = new Date(year, month, day);
-    if(dateObj < new Date(today.getFullYear(), today.getMonth(), today.getDate())) continue; // hide tarikh lepas
-
-    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-    const cell = document.createElement("div");
-    cell.textContent = day;
-    cell.classList.add("date","p-2","rounded-lg","cursor-pointer");
-
-    if(bookedDates.includes(dateStr)){
-      cell.classList.add("bg-red-600","text-white");
-      cell.title = "Telah dibook";
-    } else {
-      cell.classList.add("bg-slate-600","hover:bg-slate-500","text-white");
-    }
-
-    // Klik toggle hanya kalau ownerMode
-    if(ownerMode){
-      cell.addEventListener("click",()=>{
-        if(bookedDates.includes(dateStr)){
-          bookedDates = bookedDates.filter(d => d !== dateStr);
-          cell.classList.remove("bg-red-600");
-          cell.classList.add("bg-slate-600");
-          cell.title = "";
-        } else {
-          bookedDates.push(dateStr);
-          cell.classList.remove("bg-slate-600");
-          cell.classList.add("bg-red-600");
-          cell.title = "Telah dibook";
-        }
-        localStorage.setItem('bookedDates', JSON.stringify(bookedDates));
-      });
-    } else {
-      cell.classList.remove("cursor-pointer");
-    }
-
-    calendarGrid.appendChild(cell);
-  }
-}
-
-// Load default
-renderCalendar(today.getFullYear(), today.getMonth());
-
-// Tukar bulan/tahun
-monthSelect.addEventListener("change",()=> renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value)));
-yearSelect.addEventListener("change",()=> renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value)));
-
-// Tukar mode dengan password
-document.getElementById("ownerModeBtn").addEventListener("click",()=>{
-  const password = prompt("Sila masukkan password:");
-  if(password === "falisybalok246"){ // tetapkan password owner di sini
-    ownerMode = true;
-    alert("Owner mode diaktifkan!");
-    renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value));
-  } else {
-    alert("Password salah! Customer mode diaktifkan.");
-    ownerMode = false;
-    renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value));
-  }
-});
-
-// Customer mode tetap
-document.getElementById("customerModeBtn").addEventListener("click",()=>{
-  ownerMode = false;
-  renderCalendar(parseInt(yearSelect.value), parseInt(monthSelect.value));
-});
-</script>
-
-<style>
-.date {
-  transition: transform 0.2s;
-}
-.date:hover {
-  transform: scale(1.05);
-}
-</style>
-
-
-   
   <!-- PRICING SECTION -->
   <section id="pricing" class="py-12">
     <div class="max-w-4xl mx-auto px-4">
@@ -474,7 +292,6 @@ document.getElementById("customerModeBtn").addEventListener("click",()=>{
     });
   </script>
 
-  <style>.bg-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));}</style>
-
 </body>
 </html>
+
